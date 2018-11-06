@@ -1,0 +1,26 @@
+{
+  "name": "learn-graphql-express",
+  "version": "1.0.0",
+  "description": "\"# Simple-graphQL-with-express\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andikanugraha11/Simple-graphQL-with-express.git"
+  },
+  "author": "Andika Nugraha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andikanugraha11/Simple-graphQL-with-express/issues"
+  },
+  "homepage": "https://github.com/andikanugraha11/Simple-graphQL-with-express#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.3",
+    "morgan": "^1.9.1"
+  }
+}
