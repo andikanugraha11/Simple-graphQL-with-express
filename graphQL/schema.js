@@ -1,22 +1,35 @@
 //schema.js
-const buildSchema = require('graphql');
+// const { buildSchema } = require('graphql');
+const { makeExecutableSchema } = require('graphql-tools')
+const resolvers = require('./resolver');
 
-// import {
-//     resolvers
-// } from './resolver';
-
-const typeDefs = `
-type Product {
-  _id: ID!
-  title: String!
-  qty: Int
- }
+const typeDefs = 
+`type Product {
+  _id: ID
+  name: String!
+  description: String
+  price: Float
+}
 type Query {
-  allProducts: [Product]
+  products: [Product]
+}
+
+input ProductInput {
+  name: String!
+  description: String
+  price: Float
+ }
+
+ type Mutation {
+  createProduct(input: ProductInput) : Product
  }
 `;
-const schema = buildSchema({
-    typeDefs,
-    resolvers
+
+
+const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers
 });
-export default schema;
+
+
+module.exports = schema;
