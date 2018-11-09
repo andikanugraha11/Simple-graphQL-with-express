@@ -19,6 +19,7 @@ mongoose.connection.on('error', (err)=>{
 app.use(morgan('dev'));
 app.use('/graphQL', expressGraphQl({
     schema : schema,
+    // graphiql: false,
     graphiql: true
     
 }))
